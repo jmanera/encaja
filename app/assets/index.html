@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Encaja</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="top">
+    <button class="btn icon" id="bMenu" aria-label="Menú"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <h1>Encaja</h1>
+    <div class="stats">
+      <div class="stat"><b id="sScore">0</b><span>Puntos</span></div>
+      <div class="stat"><b id="sLines">0</b><span>Líneas</span></div>
+      <div class="stat"><b id="sLevel">1</b><span>Nivel</span></div>
+      <div class="stat wide"><b id="sTime">0:00</b><span id="sTimeL">Tiempo</span></div>
+    </div>
+    <button class="btn icon" id="bPause" aria-label="Pausa"><svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg></button>
+  </header>
+  <div id="main">
+    <aside class="ctl" id="ctlL">
+      <button data-c="hold" class="small" aria-label="Guardar"><svg viewBox="0 0 24 24"><path d="M5 9h14v10H5zM8 5h8M12 12v4"/></svg><span>Guardar</span></button>
+      <div class="pair">
+        <button data-c="left" aria-label="Izquierda"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button>
+        <button data-c="right" aria-label="Derecha"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button>
+      </div>
+      <button data-c="soft" aria-label="Bajar"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+    </aside>
+    <div id="stage"><canvas id="cv"></canvas></div>
+    <aside class="ctl" id="ctlR">
+      <button data-c="ccw" class="small" aria-label="Girar a la izquierda"><svg viewBox="0 0 24 24"><path d="M9 4 4 9l5 5"/><path d="M4 9h9a6 6 0 1 1 0 12h-2"/></svg><span>Girar</span></button>
+      <button data-c="cw" aria-label="Girar a la derecha"><svg viewBox="0 0 24 24"><path d="m15 4 5 5-5 5"/><path d="M20 9h-9a6 6 0 1 0 0 12h2"/></svg></button>
+      <button data-c="hard" aria-label="Soltar"><svg viewBox="0 0 24 24"><path d="m6 5 6 6 6-6M6 11l6 6 6-6M5 21h14"/></svg></button>
+    </aside>
+  </div>
+</div>
+<div id="modal"><div id="sheet" role="dialog" aria-modal="true"></div></div>
+<div id="toast" role="status"></div>
+<script src="motor.js"></script>
+<script src="temas/caramelos.js"></script>
+<script src="temas/madera.js"></script>
+<script src="temas/neon.js"></script>
+<script src="temas/navidad.js"></script>
+<script src="dibujo.js"></script>
+<script src="musica.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
